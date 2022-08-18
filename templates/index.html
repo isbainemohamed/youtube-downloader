@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<script>
+    function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("myCheck");
+  // Get the output text
+  var text = document.getElementById("language");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+
+    function spinner() {
+		const btn_ = document.getElementById('alert');
+          btn_.style.visibility = 'hidden';
+
+        const btn = document.getElementsByClassName('container-login100-form-btn')[0];
+          btn.style.visibility = 'hidden';
+          document.getElementsByClassName("spinnerr")[0].style.visibility = 'visible';
+
+    }
+</script>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('../static/images/bg-01.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form validate-form" id="form" action="/process" method="post">
+					<span class="login100-form-title p-b-49">
+						Youtube Video Converter & Transcriber
+					</span>
+												<div class="alert alert-danger" style="visibility:hidden" role="alert" id="alert">Provided url is not a YouTube Video URL !</div>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "URL is required">
+						<span class="label-input100">Youtube Video URL</span>
+						<input class="input100" id="url" type="text" name="url" placeholder="enter youtube url">
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+					<div class="form-group">
+                        <label for="language">Please select output audio format</label>
+                        <select id="format"   name="format" class="form-control">
+                          <option selected>mp3</option>
+                          <option>wav</option>
+                        </select>
+                      </div>
+
+                        <div class="wrap-input100 validate-input m-b-23">
+                        <input type="checkbox" name="transcription" class="form-check-input" id="myCheck" onclick="myFunction()">
+                        <label class="form-check-label" for="myCheck">Transcription</label>
+                      </div>
+                        <div class="form-group">
+                        <label for="language">Please select transcription language</label>
+                        <select id="language" style="display:none"  name="language" class="form-control">
+                          <option selected>en-US</option>
+                          <option>fr-FR</option>
+                        </select>
+                      </div>
+
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" id="process" type="submit" onclick="spinner()">
+								Process
+							</button>
+						</div>
+					</div>
+                    </form>
+                <div class="spinnerr" style="visibility:hidden" >
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                </div>
+
+					<div class="txt1 text-center p-t-54 p-b-20">
+						<a href="https://github.com/isbainemohamed/youtubevideotranscriber">
+						<span>
+							Or Try our Notebook on Google Colab !
+						</span>
+							</a>
+					</div>
+
+					<div class="flex-c-m">
+						<a href="https://www.facebook.com/mohamed.isbaine" class="login100-social-item bg1">
+							<i class="fa fa-globe"></i>
+						</a>
+
+						<a href="https://www.linkedin.com/in/mohamed-isbaine/" class="login100-social-item bg2">
+							<i class="fa fa-linkedin"></i>
+						</a>
+
+						<a href="https://github.com/isbainemohamed" class="login100-social-item bg3">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+    <form action="/download" id="down_form" method="post">
+        <div id="name-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_name"
+            name="video_name"
+            hidden
+
+          />
+        </div>
+
+        <div id="email-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_id"
+            name="video_id"
+            hidden
+
+          />
+        </div>
+
+        <div id="superhero-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="isTrans"
+            name="isTrans"
+            hidden
+          />
+        </div>
+		<div id="format-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="format_"
+            name="format"
+            hidden
+          />
+        </div>
+
+        <button hidden id="submit_form" type="submit" class="btn btn-success">
+          Submit
+        </button>
+
+    </form>
+	
+
+	<div id="dropDownSelect1"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).on('submit','#form',function(e)
+                   {
+      console.log('hello');
+      e.preventDefault();
+                       let transcript = "off";
+                       if($("#myCheck").is(":checked")){
+                transcript="on";
+                console.log(transcript);
+            }
+            else if($(this).is(":not(:checked)")){
+                transcript="off";
+                console.log(transcript);
+            }
+      $.ajax({
+        type:'POST',
+        url:'/process',
+        data:{
+          url:$("#url").val(),
+            transcription:transcript,
+            language:$("#language").val(),
+			format:$("#format").val()
+        },
+        success:function(resp)
+        {
+
+          console.log(resp);
+            $("#spinnerr").remove();
+            var url=window.location.href+"download?id="+encodeURIComponent(resp.id)+"&name="+encodeURIComponent(resp.video_name)+"&isTrans="+encodeURIComponent(resp.isTrans);
+			if(resp.id=="error"){
+				const btn1 = document.getElementById('alert');
+          btn1.style.visibility = 'visible';
+							const btn = document.getElementsByClassName('container-login100-form-btn')[0];
+						  btn.style.visibility = 'visible';
+						  document.getElementsByClassName("spinnerr")[0].style.visibility = 'hidden';
+						}
+			else if(resp.id!="error") {
+				document.getElementById('video_id').value = resp.id;
+				document.getElementById('video_name').value = resp.video_name;
+				document.getElementById('isTrans').value = resp.isTrans;
+				document.getElementById('format_').value = resp.format;
+				document.forms[1].submit();
+			}
+
+
+
+        }
+      })
+    });
+  </script>
+	
+<!--===============================================================================================-->
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../static/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/js/main.js"></script>
+
+</body>
+</html>

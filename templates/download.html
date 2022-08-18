@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Download your audio & transcription</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<script>
+    function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("myCheck");
+  // Get the output text
+  var text = document.getElementById("language");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+
+    function spinner() {
+
+        const btn = document.getElementsByClassName('container-login100-form-btn')[0];
+          btn.style.visibility = 'hidden';
+          document.getElementsByClassName("spinnerr")[0].style.visibility = 'visible';
+
+    }
+</script>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('../static/images/bg-01.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+
+				<h3>{{ data.video_name }}</h3>
+				<br>
+                <form action="/ressource/audio" id="down_form" method="post">
+        <div id="name-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_name"
+            name="video_name"
+            value="{{ data.video_name }}"
+            hidden
+
+          />
+        </div>
+
+        <div id="email-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_id"
+            name="video_id"
+            hidden
+            value="{{ data.video_id }}"
+
+          />
+        </div>
+					<div id="email-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_id"
+            name="format"
+            hidden
+            value="{{ data.format }}"
+
+          />
+        </div>
+
+        <div id="superhero-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="isTrans"
+            name="isTrans"
+            value="{{ data.isTrans }}"
+            hidden
+          />
+        </div>
+
+
+
+<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" id="submit_form" type="submit" >
+								Download Audio File
+							</button>
+						</div>
+					</div>
+
+    </form>
+                {% if data.isTrans=="true" %}
+                <form action="/ressource/text" id="down_form" method="post">
+        <div id="name-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_name"
+            name="video_name"
+            value="{{ data.video_name }}"
+            hidden
+
+          />
+        </div>
+					<div id="email-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_id"
+            name="format"
+            hidden
+            value="{{ data.format }}"
+
+          />
+        </div>
+
+        <div id="email-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_id"
+            name="video_id"
+            hidden
+            value="{{ data.video_id }}"
+
+          />
+        </div>
+
+        <div id="superhero-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="isTrans"
+            name="isTrans"
+            value="{{ data.isTrans }}"
+            hidden
+          />
+        </div>
+<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" id="submit_form" type="submit" >
+								Download Transcription
+							</button>
+						</div>
+					</div>
+
+
+
+    </form>
+                {% endif %}
+
+
+				<form action="/new" id="down_form" method="post">
+        <div id="name-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_name"
+            name="video_name"
+            value="{{ data.video_name }}"
+            hidden
+
+          />
+        </div>
+
+        <div id="email-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_id"
+            name="video_id"
+            hidden
+            value="{{ data.video_id }}"
+
+          />
+        </div>
+					<div id="email-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="video_id"
+            name="format"
+            hidden
+            value="{{ data.format }}"
+
+          />
+        </div>
+
+        <div id="superhero-group" class="form-group">
+
+          <input
+            type="text"
+            class="form-control"
+            id="isTrans"
+            name="isTrans"
+            value="{{ data.isTrans }}"
+            hidden
+          />
+        </div>
+
+
+
+<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" id="submit_form" type="submit" >
+								Process another video
+							</button>
+						</div>
+					</div>
+
+    </form>
+
+
+				<p class="text-left" >{{ data.transcription }}</p>
+
+			</div>
+		</div>
+	</div>
+
+
+
+					<div class="flex-c-m">
+						<a href="https://www.facebook.com/mohamed.isbaine" class="login100-social-item bg1">
+							<i class="fa fa-globe"></i>
+						</a>
+
+						<a href="https://www.linkedin.com/in/mohamed-isbaine/" class="login100-social-item bg2">
+							<i class="fa fa-linkedin"></i>
+						</a>
+
+						<a href="https://github.com/isbainemohamed" class="login100-social-item bg3">
+							<i class="fa fa-github"></i>
+						</a>
+
+					</div>
+	<div class="txt1 text-center p-t-54 p-b-20">
+						<span >
+							@Copyrights ISBAINE MOHAMED
+						</span>
+					</div>
+
+
+
+	
+
+	<div id="dropDownSelect1"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+
+
+	
+<!--===============================================================================================-->
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../static/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/js/main.js"></script>
+
+</body>
+</html>
