@@ -121,7 +121,7 @@ def get_text():
     print("=====================")
     print(filename)
     print(os.getcwd())
-    return send_file(filename, as_attachment=True, download_name6=attachement)
+    return send_file(filename, as_attachment=True, download_name=attachement)
 
 
 if __name__ == '__main__':
