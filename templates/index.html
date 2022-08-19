@@ -33,12 +33,15 @@
   var checkBox = document.getElementById("myCheck");
   // Get the output text
   var text = document.getElementById("language");
+  var lbl = document.getElementById("label");
 
   // If the checkbox is checked, display the output text
   if (checkBox.checked == true){
     text.style.display = "block";
+	lbl.style.display = "block";
   } else {
     text.style.display = "none";
+	lbl.style.display = "none";
   }
 }
 
@@ -76,12 +79,12 @@
                         </select>
                       </div>
 
-                        <div class="wrap-input100 validate-input m-b-23">
+                        <div class="wrap-input100 validate-input m-b-23" style="margin-left: 5%">
                         <input type="checkbox" name="transcription" class="form-check-input" id="myCheck" onclick="myFunction()">
                         <label class="form-check-label" for="myCheck">Transcription</label>
                       </div>
                         <div class="form-group">
-                        <label for="language">Please select transcription language</label>
+                        <label id="label" style="display:none" for="language">Please select transcription language</label>
                         <select id="language" style="display:none"  name="language" class="form-control">
                           <option selected>en-US</option>
                           <option>fr-FR</option>
