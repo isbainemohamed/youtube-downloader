@@ -38,7 +38,7 @@ def get_video(url,format):
                 'preferredquality': '192',
             }],
             'geobypass': True,
-            'ffmpeg_location': '/app/.heroku/python/lib/python3.10/site-packages/ffmpeg'
+            'ffmpeg_location': '/app/vendor/ffmpeg/ffmpeg'
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
