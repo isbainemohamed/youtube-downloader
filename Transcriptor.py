@@ -181,7 +181,7 @@ def main(url,format,isTr,lang,n_batches=4):
         print(os.getcwd())
         stamp=split_audio(path,video_id, format)
         print(stamp)
-        files = sort_chunks(video_id, stamp, "/")
+        files = sort_chunks(video_id, stamp, "./")
         threads = [None]*n_batches
         frames = [None]*n_batches
         batches = split_files(files, n_batches)
