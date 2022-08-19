@@ -74,34 +74,32 @@ Here is the landing page:
 
 Copy the Youtube link in the input field:
 
-![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/5930b9e16989bb6f5e838ab18e8429a74200aaf7/demo_images/Screenshot%202022-08-19%20at%2022-45-12%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
+![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/e57b5caea7c762045e7bcb0d5a9a6405ff77d340/demo_images/Screenshot%202022-08-19%20at%2022-46-17%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
 
 select audio format (wav of mp3):
 
-![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/5930b9e16989bb6f5e838ab18e8429a74200aaf7/demo_images/Screenshot%202022-08-19%20at%2022-45-12%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
+![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/e57b5caea7c762045e7bcb0d5a9a6405ff77d340/demo_images/select_format.png)
 
 click on process and wait for conversion to complete
 
-![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/5930b9e16989bb6f5e838ab18e8429a74200aaf7/demo_images/Screenshot%202022-08-19%20at%2022-45-12%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
+![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/e57b5caea7c762045e7bcb0d5a9a6405ff77d340/demo_images/down%20page.png)
 
-Then, download your file by clicking on the button below:
-
-![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/5930b9e16989bb6f5e838ab18e8429a74200aaf7/demo_images/Screenshot%202022-08-19%20at%2022-45-12%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
+Then, download your file by clicking on the Download button 
 
 The audio file will be downloaded like this:
 
-![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/5930b9e16989bb6f5e838ab18e8429a74200aaf7/demo_images/Screenshot%202022-08-19%20at%2022-45-12%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
+![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/e57b5caea7c762045e7bcb0d5a9a6405ff77d340/demo_images/downloaded%20audio.png)
 
 If you want to perform a transcription, select the transcription checkbox and select transcription language:
 
-![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/5930b9e16989bb6f5e838ab18e8429a74200aaf7/demo_images/Screenshot%202022-08-19%20at%2022-45-12%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
+![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/e57b5caea7c762045e7bcb0d5a9a6405ff77d340/demo_images/with%20transcription.png)
 
 Your transcription will be generated as follows
 
-![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/5930b9e16989bb6f5e838ab18e8429a74200aaf7/demo_images/Screenshot%202022-08-19%20at%2022-45-12%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
+![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/e57b5caea7c762045e7bcb0d5a9a6405ff77d340/demo_images/transcription%20generated.png)
 
 and you can download it as a txt file
-![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/5930b9e16989bb6f5e838ab18e8429a74200aaf7/demo_images/Screenshot%202022-08-19%20at%2022-45-12%20Convert%20Youtube%20Video%20to%20Audio%20&%20Text.png)
+![Logo](https://github.com/isbainemohamed/youtube-downloader/blob/e57b5caea7c762045e7bcb0d5a9a6405ff77d340/demo_images/final.png)
 
 
 
