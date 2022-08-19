@@ -118,6 +118,7 @@ def get_text():
     print(uploads)
     attachement = data["video_name"] + ".txt"
     filename =app.root_path+app.config["UPLOAD_FOLDER"]+"Transcription_"+data["video_id"]+".txt"
+    print("=====================")
     print(filename)
     print(os.getcwd())
     return send_file(filename, as_attachment=True, download_name6=attachement)
