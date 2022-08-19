@@ -5,6 +5,16 @@ import Transcriptor as tr
 import yt_dlp
 
 app = Flask(__name__)
+import os
+
+def list_files(startpath):
+    for root, dirs, files in os.walk(startpath):
+        level = root.replace(startpath, '').count(os.sep)
+        indent = ' ' * 4 * (level)
+        print('{}{}/'.format(indent, os.path.basename(root)))
+        subindent = ' ' * 4 * (level + 1)
+        for f in files:
+            print('{}{}'.format(subindent, f))
 
 app.config['UPLOAD_FOLDER'] = "./"
 def check_url(url):
@@ -90,7 +100,8 @@ def get_audio():
     data["format"] = request.form['format']
     attachement = data["video_name"] + "." + data["format"]
     filename=app.root_path + app.config["UPLOAD_FOLDER"] + data["video_id"] + "." + data["format"]
-    print(uploads)
+    print(filename)
+    list_files("./")
     return send_file(filename, as_attachment=True, download_name=attachement)
 
 
