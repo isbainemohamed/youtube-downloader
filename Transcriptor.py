@@ -201,10 +201,10 @@ def main(url,format,isTr,lang,n_batches=4):
         return None,name,video_id,None
 def write_output(result,video_id):
     #os.chdir("/")
-    text_file = open("./Transcription_" + video_id + ".txt", "w")
+    text_file = open("Transcription_" + video_id + ".txt", "w")
     text_file.write(result)
     text_file.close()
-    return "./Transcription_" + video_id + ".txt"
+    return "Transcription_" + video_id + ".txt"
 
 
 def delete_temp(files):
