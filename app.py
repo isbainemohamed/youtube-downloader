@@ -16,7 +16,7 @@ def list_files(startpath):
         for f in files:
             print('{}{}'.format(subindent, f))
 
-app.config['UPLOAD_FOLDER'] = "./"
+app.config['UPLOAD_FOLDER'] = "/"
 def check_url(url):
     try:
         ydl_opts = {}
